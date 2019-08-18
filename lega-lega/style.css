@@ -1,0 +1,1900 @@
+/* Styles go here */
+
+*, *:hover, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia;
+}
+
+header {
+    background: white;
+    position: relative;
+    height: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.header-wrap {
+    background: black;
+    position: fixed;
+    height: 105px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 100px;
+    z-index: 999;
+}
+
+@media (max-width: 991px) {
+    .header-wrap {
+        position: static; 
+    }
+}
+
+.header-phone {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .header-phone {
+        display: flex;
+        position: relative;
+        width: 30%;
+        min-width: 300px;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: space-around;
+    }
+}
+
+.languages {
+    font-size: 12px;
+    color: #808080;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    align-self: center;
+}
+
+.languages a {
+    color: #808080;
+    text-decoration: none;
+}
+
+
+i {
+    color: #808080;
+    font-size: 12px;
+    padding-right: 7px;
+}
+
+.navigation {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 45px;
+} 
+
+.networks {
+    margin-top: -14px;
+}
+
+.search {
+    display: block;
+    position: relative;
+    border: 1px solid #808080;
+    width: 70px;
+    height: 40px;
+}
+
+.search a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+select {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: Georgia;
+    padding: 5px;
+}
+
+option {
+    font-size: 14px; 
+    text-transform: none;
+    font-family: Georgia;
+    font-weight: 100;
+}
+
+
+.header-content {
+    display: flex;
+    position: relative;
+    width: 60%;
+    min-width: 1100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .header-content {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-content {
+        display: none;
+    }
+}
+
+.logo {
+    position: relative;
+    display: block;
+    width: 85px;
+    height: 80px;
+    background: url("images/icons.png");
+}
+
+.logo a {
+    display: block;
+    position: relative;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.header-lists {
+    display: flex;
+    position: relative;
+    min-width: 55%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: -13%;
+}
+
+.top-list {
+    display: flex;
+    position: relative;
+    min-width: 60%;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 18px;
+    color: #808080;
+}
+
+
+.top-list a {
+    color: #808080;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    list-style: none;
+}
+
+
+.bottom-list {
+    display: flex;
+    position: relative;
+    min-width: 95%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    color: #999;
+}
+
+@media (max-width: 1200px) {
+    .bottom-list {
+        width: 100%;
+    }
+}
+
+.bottom-list a {
+    color: #999;
+    font-size: 14px;
+    font-family: Verdana;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 21px;
+    font-weight: 600;
+}
+
+.bottom-list li:hover a {
+    border-bottom: 2px solid white;
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+}
+
+.top-list li:hover a {
+    color: #aaa7a7;
+}
+
+.bottom-list li:hover a {
+    color: rgb(83, 83, 83); 
+}
+
+.shop-list {
+    display: flex;
+    width: 250px;
+    height: 109px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #4b4a4a;
+    padding: 0;
+    list-style: none; 
+    display: none;
+}
+
+
+.shop:hover .shop-list {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 275px;
+    background: #4b4a4a;
+    margin-top: 22px;
+    padding: 0;
+    list-style: none;
+    z-index: 100;
+}
+
+.shop-list li:hover {
+    background: #3f3f3f;
+}
+
+.shop:hover .shop-list li a {
+    color: #999;
+    display: block;
+    text-align: left;
+    font-size: 10px;
+    padding-left: 15px;
+    padding-top: 20px;
+    font-weight: 100;
+    border-bottom: 1px solid white;
+}
+
+.longsleeve-list {
+    display: none;
+}
+
+.longsleeve:hover .longsleeve-list {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 250px;
+    width: 250px;
+    height: 165px;
+    background: #4b4a4a;
+    border-bottom: 1px solid white;
+    top: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 100;
+}
+
+.shirts-list {
+    display: none;
+}
+
+.shirts:hover .shirts-list {
+    display: flex;
+    width: 250px;
+    height: 110px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #4b4a4a;
+    left: 250px;
+    top: 55px;
+    padding: 0;
+    list-style: none;
+}
+
+.paper-list {
+    display: none;
+}
+
+.paper:hover .paper-list {
+    display: flex;
+    width: 250px;
+    height: 109px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #4b4a4a;
+    left: 250px;
+    top: 111px;
+    padding: 0;
+    list-style: none;
+}
+
+.checkout {
+    width: 172px;
+    height: 202px;
+    display: block;
+    position: relative;
+    display: block;
+    background: url("images/icons.png") no-repeat;
+    background-position: -98px 35px;
+}
+
+.checkout a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.checkout:hover {
+    background-position: -98px 45px;
+}
+
+.checkout:hover .checkout-info {
+    top: 65px;
+}
+
+.checkout-info {
+    margin-top: 40px;
+    display: block;
+    position: absolute;
+    border: 1px dotted white;
+    border-left: none;
+    border-right: none;
+    top: 55px;
+    left: 15px;
+    width: 140px;
+    height: 23px;
+    padding-top: 2px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+
+.checkout-info:hover a {
+    text-decoration: underline;
+}
+
+.checkout-in {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.lines-list {
+    display: block;
+    position: relative;
+    width: 65%;
+    min-width: 1110px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+@media (max-width: 1200px) {
+    .lines-list {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .lines-list {
+        min-width: 750px;
+    }
+}
+
+@media (max-width: 786px) {
+    .lines-list {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .lines-list {
+        min-width: 325px;
+    }
+}
+
+.decoration-line {
+    display: block;
+    position: relative;
+    min-width: 97%;
+    height: 12px;
+    margin: 0 auto;
+    background: url("images/double-line.gif") no-repeat center;
+    margin-bottom: 40px;
+}
+
+
+.products-list {
+    width: 90%;
+    min-width: 1100px;
+    height: 70px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+
+.paper-img {
+    background: url("images/link-paper-en.gif") no-repeat;
+    height: 60px;
+}
+
+.paper-img a {
+    display: block;
+    height: 100%;
+}
+
+.shirts-img {
+    height: 60px;
+    background: url("images/link-tshirt-en.gif") no-repeat;
+}
+
+.shirts-img a {
+    display: block;
+    height: 100%;
+}
+
+.sleeves-img {
+    height: 60px;
+    background: url("images/link-longsleeve-en.gif") no-repeat;
+}
+
+.sleeves-img a {
+    display: block;
+    height: 100%; 
+}
+
+.other-img {
+    height: 60px;
+    background: url("images/link-other-en.gif") no-repeat;
+}
+
+.other-img a {
+    display: block;
+    height: 100%; 
+}
+
+.featured {
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    min-width: 97%;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.left-line {
+    display: block;
+    position: relative;
+    background: url("images/double-line-background.gif");
+    width: 40%;
+    height: 7px;
+}
+
+.featured h3 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: Helvetica;
+    width: 25%;
+    min-width: 280px;
+    text-align: center;
+}
+
+.right-line {
+    display: block;
+    position: relative;
+    background: url("images/double-line-background.gif");
+    width: 40%;
+    height: 7px;
+}
+
+.main-products {
+    display: flex;
+    position: relative;
+    width: 65%;
+    min-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+    .main-products {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .main-products {
+        min-width: 750px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 786px) {
+    .main-products {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .main-products  {
+        min-width: 325px;
+    }
+}
+
+.product-info {
+    display: flex;
+    position: relative;
+    width: 23%;
+    height: 440px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-info11 {
+    display: flex;
+    position: relative;
+    width: 23%;
+    height: 440px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .product-info11 {
+    height: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-info11 {
+    height: 450px;
+    width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-info {
+    height: 330px;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-info {
+    height: 450px;
+    width: 100%;
+    }
+}
+
+
+.product-info9 {
+    display: flex;
+    position: relative;
+    width: 23%;
+    height: 440px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    visibility: none;
+}
+
+@media (max-width: 1200px) {
+    .product-info9 {
+    height: 330px;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-info9 {
+    display: none;
+    }
+}
+
+.product-info13 {
+    display: flex;
+    position: relative;
+    width: 23%;
+    height: 440px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    visibility: none;
+}
+
+@media (max-width: 1200px) {
+    .product-info13 {
+    height: 330px;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-info13 {
+    display: none;
+    }
+}
+
+
+.product-foto {
+    width: 100%;
+    height: 75%;
+    background: url("images/vbk-plava-2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    .product-foto {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto  {
+        width: 70%;
+    }
+}
+
+.product-foto1 {
+    background: url("images/bijeli-greenroom_02.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto1 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto1  {
+        width: 70%;
+    }
+}
+
+.product-foto2 {
+    background: url("images/bijeli-greenroom_03.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto2 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto2  {
+        width: 70%;
+    }
+}
+
+.product-foto3 {
+    background: url("images/guys-white-legalega-1.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto3 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto3  {
+        width: 70%;
+    }
+}
+
+.product-foto4 {
+    background: url("images/lega02.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto4 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto4  {
+        width: 70%;
+    }
+}
+
+.product-foto5 {
+    background: url("images/lega08.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto5 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto5  {
+        width: 70%;
+    }
+}
+
+.product-foto6 {
+    background: url("images/kozni-legic.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto6 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto6  {
+        width: 70%;
+    }
+}
+
+.product-foto7 {
+    background: url("images/LL0140A.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto7 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto7  {
+        width: 70%;
+    }
+}
+
+.product-foto8 {
+    background: url("images/LL0140A.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto8 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto8  {
+        width: 70%;
+    }
+}
+
+.product-foto9 {
+    background: url("images/bicyclesiva-1.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto9 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto9  {
+        width: 70%;
+    }
+}
+
+.product-foto10 {
+    background: url("images/slatka-legica_.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto10 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto10  {
+        width: 70%;
+    }
+}
+
+
+.product-foto11 {
+    background: url("images/LL0122B_01.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 1200px) {
+    .product-foto11 {
+        height: 72%;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-foto11 {
+      width: 40%;
+      height: 75%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto11  {
+        width: 70%;
+    }
+}
+
+.product-foto12 {
+    background: url("images/mekane-korice.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto12 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto12  {
+        width: 70%;
+    }
+}
+
+.product-foto14 {
+    background: url("images/bandana-sve-aaaaaaaa02.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto14 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto14  {
+        width: 70%;
+    }
+}
+
+.product-foto15 {
+    background: url("images/girls-red-D-1.jpg") no-repeat center;
+    background-size: cover;
+    width: 98%;
+    height: 75%;
+}
+
+@media (max-width: 991px) {
+    .product-foto15 {
+      width: 40%;
+    }
+}
+
+@media (max-width: 625px) {
+    .product-foto15  {
+        width: 70%;
+    }
+}
+
+.product-foto:hover {
+    opacity: 0.7;
+}
+
+.product-foto1:hover, .product-foto2:hover, .product-foto3:hover {
+    opacity: 0.7;
+}
+
+.product-foto4:hover, .product-foto5:hover, .product-foto6:hover {
+    opacity: 0.7;
+}
+
+.product-foto7:hover, .product-foto8:hover, .product-foto9:hover {
+    opacity: 0.7;
+}
+
+.product-foto10:hover, .product-foto11:hover, .product-foto12:hover {
+    opacity: 0.7;
+}
+
+.product-foto13:hover, .product-foto14:hover, .product-foto15:hover {
+    opacity: 0.7;
+}
+
+.product-foto a, .product-foto1 a, .product-foto2 a, .product-foto3 a  {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.product-foto4 a, .product-foto5 a, .product-foto6 a, .product-foto7 a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.product-foto8 a, .product-foto9 a, .product-foto10 a, .product-foto11 a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.product-foto12 a, .product-foto13 a, .product-foto14 a, .product-foto15 a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.product-name {
+    border-top: 3px solid black;
+    width: 99%;
+    height: 25px;
+}
+
+.product-name a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Helvetica;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    height: 100%;
+    padding-top: 4px;
+}
+
+.product-name a:hover {
+    color: #444444;
+}
+
+.product-name11 {
+    border-top: 3px solid black;
+    width: 99%;
+    height: 25px;
+}
+
+
+.product-name11 a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: Helvetica;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    height: 100%;
+    padding-top: 4px;
+}
+
+.product-name11 a:hover {
+    color: #444444;
+}
+
+.product-price {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    border-top: 2px dotted black;
+    width: 99%;
+    align-items: center;
+    height: 40px;
+}
+
+.product-price11 {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    border-top: 2px dotted black;
+    width: 99%;
+    align-items: center;
+    height: 40px;
+}
+
+
+.bag {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.bag:hover {
+    color: #444444;
+}
+
+.product-price del {
+    color: #504f4f;
+}
+
+.decoration-line3 {
+    display: block;
+    position: relative;
+    width: 65%;
+    min-width: 1100px;
+    height: 12px;
+    background: url("images/double-line.gif") no-repeat center;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+    .decoration-line3 {
+      min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .decoration-line3 {
+      min-width: 750px;
+    }
+}
+
+@media (max-width: 786px) {
+    .decoration-line3 {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .decoration-line3  {
+        min-width: 325px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-name11 {
+        height: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-name11 {
+        height: 20px;
+    }
+}
+
+.products-column {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 65%;
+    min-width: 1100px;
+    height: 400px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+    .products-column {
+      min-width: 900px;
+      height: 500px;
+    }
+}
+
+@media (max-width: 991px) {
+    .products-column {
+      min-width: 750px;
+      flex-direction: column;
+      height: 1050px;
+    }
+}
+
+@media (max-width: 786px) {
+    .products-column {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .products-column  {
+        min-width: 325px;
+        height: 1550px;
+    }
+}
+
+.sale-products {
+    width: 32%;
+    height: 98%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+    .sale-products {
+      width: 99%;
+      height: 36%;
+    }
+}
+
+@media (max-width: 991px) {
+    .sale-products:last-child {
+      width: 99%;
+      height: 25%;
+      justify-content: flex-start;
+    }
+}
+
+
+.sale-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    display: block;
+    border-bottom: 1px dotted black;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-indent: 5px;
+    width: 99%;
+}
+
+.sale-info {
+    width: 99%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.sale-img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/LL0120A.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img1 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/LL0140A.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img2 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/LL0138A.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img3 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/IDMDM_01.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img4 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/vbk-plava-2.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img5 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/girls-red-D-1.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img6 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/bijeli-greenroom_02.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img7 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background: url("images/bijeli-greenroom_03.jpg") no-repeat center;
+    background-size: cover;
+    margin-right: 2px;
+    border: 1px solid #525151;
+}
+
+.sale-img-a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.sale-inn {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+.sale-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.sale-name:hover {
+    color: #bdbbbb;
+}
+
+.between-line {
+    width: 99%;
+    height: 2px;
+    background: #e2dfdf;
+}
+
+.sale-price {
+    font-size: 12px;
+}
+
+.sale-price del {
+    color: grey;
+}
+
+.tags-info {
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    height: 87%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .tags-info {
+        width: 95%;
+        height: 60%;
+    }
+}
+
+@media (max-width: 786px) {
+    .tags-info {
+        width: 100%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 625px) {
+    .tags-info  {
+        height: 95%;
+    }
+}
+
+.tags {
+    display: inline-block;
+    height: 35px;
+    background: black;
+    border-radius: 4px;
+    text-align: center;
+    margin-right: 4px;
+}
+
+.tags a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    height: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.lines-list {
+    display: block;
+    position: relative;
+    width: 65%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+
+.products-list {
+    width: 90%;
+    height: 70px;
+    min-width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .products-list {
+        min-width: 850px;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 991px) {
+    .products-list {
+        min-width: 400px;  
+        width: 550px;
+        height: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 625px) {
+    .products-list {
+        min-width: 325px;  
+        width: 325px;
+        height: 265px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+}
+
+
+.paper-img {
+    background: url("images/link-paper-en.gif") no-repeat center;
+    width: 270px;
+    height: 60px;
+}
+
+.paper-img a {
+    display: block;
+    height: 100%;
+}
+
+.shirts-img {
+    width: 270px;
+    height: 60px;
+    background: url("images/link-tshirt-en.gif") no-repeat center;
+}
+
+.shirts-img a {
+    display: block;
+    height: 100%;
+}
+
+.sleeves-img {
+    width: 270px;
+    height: 60px;
+    background: url("images/link-longsleeve-en.gif") no-repeat center;
+}
+
+.sleeves-img a {
+    display: block;
+    height: 100%; 
+}
+
+.other-img {
+    width: 270px;
+    height: 60px;
+    background: url("images/link-other-en.gif") no-repeat center;
+}
+
+@media (max-width: 1200px) {
+    .other-img {
+       display: inline-block;
+       position: relative;
+       margin: 0 auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .other-img {
+       margin-right: 0;
+    }
+}
+
+@media (max-width: 625px) {
+    .other-img {
+        margin: 0 auto;
+    }
+}
+
+
+.other-img a {
+    display: block;
+    height: 100%; 
+}
+
+.club-news {
+    display: flex;
+    position: relative;
+    width: 40%;
+    min-width: 740px;
+    margin: 0 auto;
+    height: 200px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1200px) {
+    .club-news {
+        min-width: 600px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 991px) {
+    .club-news {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 400px;
+        height: 480px;
+    }
+}
+
+@media (max-width: 625px) {
+    .club-news {
+        min-width: 300px;
+        height: 350px;
+    }
+}
+
+.club-img {
+    display: block;
+    position: relative;
+    width: 47%;
+    background: url("images/link-club-en.png") no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    .club-img {
+        width: 99%;
+        height: 220px;
+    }
+}
+
+@media (max-width: 625px) {
+    .club-img {
+       height: 150px;
+       width: 85%;
+    }
+}
+
+.club-img:hover {
+    opacity: 0.8;
+}
+
+.news-img {
+    display: block;
+    position: relative;
+    width: 47%;
+    background: url("images/link-newsletter-en.png") no-repeat center;
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    .news-img {
+        width: 99%;
+        height: 220px;
+    }
+}
+
+@media (max-width: 625px) {
+    .news-img {
+       height: 150px;
+       width: 85%;
+    }
+}
+
+.news-img:hover {
+    opacity: 0.8;
+}
+
+.club-img a, .news-img a {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    background: black;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    footer {
+        height: 1200px;
+    }
+}
+
+@media (max-width: 625px) {
+    footer {
+        height: 1450px;
+    }
+}
+
+.contact-block {
+    display: flex;
+    position: relative;
+    width: 60%;
+    min-width: 1100px;
+    justify-content: space-between;
+    height: 200px;
+}
+
+@media (max-width: 1200px) {
+    .contact-block {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact-block {
+        min-width: 750px;
+        flex-direction: column;
+        height: 800px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 786px) {
+    .contact-block {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .contact-block  {
+        min-width: 325px;
+        margin-top: -80px;
+    }
+}
+
+.contact-us {
+    display: flex;
+    position: relative;
+    width: 23%;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #b4b1b1;
+}
+
+@media (max-width: 991px) {
+    .contact-us {
+        width: 99%;
+    }
+}
+
+.contact-article {
+    color: #b4b1b1;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #b4b1b1;
+}
+
+.contact-name {
+    margin-top: -2px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: #b4b1b1;
+}
+
+.contact-info {
+    font-size: 12px;
+    color: #b4b1b1;
+}
+
+
+.terms-conditions {
+    font-size: 12px;
+    color: #b4b1b1;
+    text-decoration: none;
+    margin-top: -40px;
+}
+
+@media (max-width: 991px) {
+    .terms-conditions {
+      margin-top: 10px;
+    }
+}
+
+.terms-conditions:hover {
+    color:  #dbd5d5;
+}
+
+.terms {
+    font-size: 12px;
+    color: #b4b1b1;
+    text-decoration: none; 
+    margin-top: -40px;
+}
+
+@media (max-width: 991px) {
+    .terms {
+      margin-top: 10px;
+    }
+}
+
+.terms:hover {
+    color:  #dbd5d5;
+}
+
+.terms-name {
+    margin-top: -45px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: #b4b1b1;
+}
+
+@media (max-width: 991px) {
+    .terms-name {
+      margin-top: 0;
+    }
+}
+
+.terms-mjuz {
+    border-top: 1px dotted #b4b1b1;
+    padding-top: 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: #b4b1b1;
+}
+
+.design-info {
+    font-size: 12px;
+    color: #b4b1b1;
+    margin-top: -5px;
+}
+
+.design-name {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: #b4b1b1;
+    margin-top: -2px;
+}
+
+.production-info {
+    font-size: 12px;
+    color: #b4b1b1;
+    margin-top: -2px;
+}
+
+.production-special {
+    text-transform: uppercase;
+    border-top: 1px dotted #b4b1b1;
+    padding-top: 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    color: #b4b1b1;
+}
+
+.line-block {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+    width: 60%;
+    min-width: 1100px;
+    background: #b4b1b1;
+    margin-top: -15px;
+    margin-bottom: -30px;
+}
+
+@media (max-width: 1200px) {
+    .line-block {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .line-block {
+        min-width: 750px;
+    }
+}
+
+@media (max-width: 786px) {
+    .line-block {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .line-block  {
+        min-width: 325px;
+        margin-top: -300px;
+    }
+}
+
+.lega-block {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    min-width: 1100px;
+    height: 180px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    .lega-block {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 991px) {
+    .lega-block {
+        min-width: 750px;
+        height: 300px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 786px) {
+    .lega-block {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 625px) {
+    .lega-block {
+        min-width: 325px;
+        margin-top: -280px;
+    }
+}
+
+.lega-logo {
+    display: block;
+    position: relative;
+    width: 15%;
+    height: 45%;
+    background: url("images/footer-logo.png") no-repeat center;
+    background-size: cover;
+    align-self: center;
+}
+
+@media (max-width: 1200px) {
+    .lega-logo {
+        height: 35%;
+    }
+}
+
+@media (max-width: 991px) {
+    .lega-logo {
+        height: 25%;
+        width: 25%;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 786px) {
+    .lega-logo {
+        width: 30%;
+    }
+}
+
+@media (max-width: 625px) {
+    .lega-logo {
+        width: 50%;
+        align-self: center;
+    }
+}
+
+.lega-info {
+     display: block;
+     position: relative;
+     width: 75%;
+     height: 50%;
+     flex-grow: 2;
+     align-self: center;
+     padding-left: 10px;
+     padding-right: 10px;
+}
+
+@media (max-width: 991px) {
+    .lega-info{
+        align-self: flex-start;
+        width: 99%;
+    }
+}
+
+.lega-info p {
+    color: #b4b1b1;
+    font-size: 14px;
+    line-height: 22px;
+}
